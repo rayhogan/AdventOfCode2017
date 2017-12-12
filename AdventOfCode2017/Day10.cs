@@ -192,7 +192,7 @@ namespace AdventOfCode2017
                 else
                     sb.Append(i.ToString("X"));
 
-                Console.WriteLine("Value: " + i + " becomes " + i.ToString("X"));
+                //Console.WriteLine("Value: " + i + " becomes " + i.ToString("X"));
             }
 
             return sb.ToString().ToLower();
