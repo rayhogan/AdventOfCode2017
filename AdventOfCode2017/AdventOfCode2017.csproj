@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Day1.cs" />
     <Compile Include="Day10.cs" />
+    <Compile Include="Day11.cs" />
     <Compile Include="Day2.cs" />
     <Compile Include="Day3.cs" />
     <Compile Include="Day4.cs" />
@@ -54,14 +55,17 @@
     <Compile Include="Day9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stuff\Hexagon.cs" />
     <Compile Include="Stuff\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inputs\Day11.txt" />
     <Content Include="Inputs\Day10.txt" />
     <Content Include="Inputs\Day10_example.txt" />
+    <Content Include="Inputs\Day11_example.txt" />
     <Content Include="Inputs\Day9.txt" />
     <Content Include="Inputs\Day8.txt" />
     <Content Include="Inputs\Day9_example.txt" />
