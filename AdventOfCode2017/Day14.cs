@@ -13,10 +13,10 @@ namespace AdventOfCode2017
             // Read Input File
             string lines = System.IO.File.ReadAllText(@"..\..\Inputs\\Day14.txt");
 
-           // Part1(lines);
+            Part1(lines);
             Part2(lines);
 
-            Console.WriteLine(hex2binary("1"));
+            //Console.WriteLine(hex2binary("1"));
         }
 
         private static void Part1(string input)
