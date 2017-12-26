@@ -79,6 +79,11 @@ namespace AdventOfCode2017
             Console.WriteLine("DAY 14");
             Console.ForegroundColor = ConsoleColor.White;
             Day14.Run();
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("DAY 15");
+            Console.ForegroundColor = ConsoleColor.White;
+            Day15.Run();
         }
     }
 }

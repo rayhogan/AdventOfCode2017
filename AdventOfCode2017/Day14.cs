@@ -16,7 +16,6 @@ namespace AdventOfCode2017
             Part1(lines);
             Part2(lines);
 
-            //Console.WriteLine(hex2binary("1"));
         }
 
         private static void Part1(string input)
@@ -38,12 +37,43 @@ namespace AdventOfCode2017
             Console.WriteLine("Used Spaces: " + count);
 
         }
-
+        static bool[,] grid;
         private static void Part2(string input)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Part II");
             Console.ForegroundColor = ConsoleColor.White;
+
+            grid = BuildGrid(input);
+
+            int regionCount = 0;
+
+            for (int i = 0; i <= 127; i++)
+            {
+                for (int j = 0; j <= 127; j++)
+                {
+                    if (grid[i, j])
+                    {
+                        grid[i, j] = false;
+                        CalculateRegions(GetNeighbours(i, j));
+                        regionCount++;
+                    }
+                }
+            }
+
+            Console.WriteLine("Region Count: " + regionCount);
+        }
+
+        private static void CalculateRegions(List<Tuple<int, int>> neighbours)
+        {
+            foreach (Tuple<int, int> t in neighbours)
+            {
+                if (grid[t.Item1, t.Item2])
+                {
+                    grid[t.Item1, t.Item2] = false;
+                    CalculateRegions(GetNeighbours(t.Item1, t.Item2));
+                }
+            }
         }
 
         public static List<int> TransformToASCII(string input)
@@ -66,10 +96,17 @@ namespace AdventOfCode2017
 
             foreach (int i in input)
             {
+
                 if (i < 10)
                     sb.Append(0 + "" + i);
                 else
+                {
+                    if (i.ToString("X").Count() < 2)
+                        sb.Append("0");
+
                     sb.Append(i.ToString("X"));
+                }
+
 
             }
 
@@ -174,9 +211,9 @@ namespace AdventOfCode2017
             string binaryval = "";
             binaryval = Convert.ToString(Convert.ToInt32(hexvalue, 16), 2);
 
-            StringBuilder sb = new StringBuilder(); 
+            StringBuilder sb = new StringBuilder();
 
-            for(int i=binaryval.Count();i<4;i++)
+            for (int i = binaryval.Count(); i < 4; i++)
             {
                 sb.Append("0");
             }
@@ -204,7 +241,80 @@ namespace AdventOfCode2017
 
         }
 
-        private static 
+        private static bool[,] BuildGrid(string input)
+        {
+            bool[,] output = new bool[128, 128];
+
+            for (int i = 0; i <= 127; i++)
+            {
+                int y = 0;
+                string knotHash = ComputeKnotHash(input + "-" + i);
+
+                if (knotHash.Count() != 32)
+                {
+                    Console.WriteLine("something afoot");
+                }
+
+                foreach (char c in knotHash.ToCharArray())
+                {
+                    string result = hex2binary(c.ToString());
+
+
+
+                    foreach (char ch in result.ToCharArray())
+                    {
+                        if (ch.Equals('1'))
+                        {
+                            output[i, y] = true;
+                        }
+                        else
+                        {
+                            output[i, y] = false;
+                        }
+
+                        y++;
+                    }
+
+                }
+
+            }
+
+
+            return output;
+        }
+
+        private static List<Tuple<int, int>> GetNeighbours(int x, int y)
+        {
+            List<Tuple<int, int>> output = new List<Tuple<int, int>>();
+            //Above it
+            if (x <= 127 && x != 0)
+            {
+                output.Add(new Tuple<int, int>(x - 1, y));
+            }
+
+            //below it
+            if (x >= 0 && x != 127)
+            {
+                output.Add(new Tuple<int, int>(x + 1, y));
+            }
+
+
+            //Left
+            if (y > 0)
+            {
+                output.Add(new Tuple<int, int>(x, y - 1));
+            }
+
+            //Right
+            if (y < 127)
+            {
+                output.Add(new Tuple<int, int>(x, y + 1));
+            }
+
+
+
+            return output;
+        }
     }
 }
 
