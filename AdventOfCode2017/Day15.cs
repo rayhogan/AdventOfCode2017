@@ -13,7 +13,7 @@ namespace AdventOfCode2017
         public static int divider = 2147483647;
         public static void Run()
         {
-            //Part1(618, 814);
+            Part1(618, 814);
             Part2(618, 814);
         }
 
