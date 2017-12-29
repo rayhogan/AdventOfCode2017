@@ -8,6 +8,11 @@ namespace AdventOfCode2017.Stuff
 {
     class DanceCoordinator
     {
+        /*
+         *  Day 16 Dance Coordinator Class
+         * 
+         * 
+         * */
         private List<char> dancers = new List<char>();
 
         public DanceCoordinator(char[] input)
