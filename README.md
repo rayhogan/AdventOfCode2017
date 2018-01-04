@@ -20,8 +20,6 @@ Day 8 challenge: http://adventofcode.com/2017/day/8
 
 Day 9 challenge: http://adventofcode.com/2017/day/11 
 
-**Not Completed**
-
 Day 10 challenge: http://adventofcode.com/2017/day/11 
 
 Day 11 challenge: http://adventofcode.com/2017/day/11 
@@ -43,6 +41,8 @@ Day 18 challenge: http://adventofcode.com/2017/day/18
 Day 19 challenge: http://adventofcode.com/2017/day/19 
 
 Day 20 challenge: http://adventofcode.com/2017/day/20 
+
+**Not Completed**
 
 Day 21 challenge: http://adventofcode.com/2017/day/21 
 
