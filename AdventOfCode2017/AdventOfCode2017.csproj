@@ -54,6 +54,7 @@
     <Compile Include="Day18.cs" />
     <Compile Include="Day19.cs" />
     <Compile Include="Day2.cs" />
+    <Compile Include="Day20.cs" />
     <Compile Include="Day3.cs" />
     <Compile Include="Day4.cs" />
     <Compile Include="Day5.cs" />
@@ -66,6 +67,8 @@
     <Compile Include="Stuff\DanceCoordinator.cs" />
     <Compile Include="Stuff\FirewallLayer.cs" />
     <Compile Include="Stuff\Hexagon.cs" />
+    <Compile Include="Stuff\Particle.cs" />
+    <Compile Include="Stuff\ParticleProperty.cs" />
     <Compile Include="Stuff\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +91,9 @@
     <Content Include="Inputs\Day18_example2.txt" />
     <Content Include="Inputs\Day19_example.txt" />
     <Content Include="Inputs\Day19.txt" />
+    <Content Include="Inputs\Day20_example2.txt" />
+    <Content Include="Inputs\Day20_example.txt" />
+    <Content Include="Inputs\Day20.txt" />
     <Content Include="Inputs\Day9.txt" />
     <Content Include="Inputs\Day8.txt" />
     <Content Include="Inputs\Day9_example.txt" />
