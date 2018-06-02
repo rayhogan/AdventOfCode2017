@@ -34,6 +34,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +59,8 @@
     <Compile Include="Day19.cs" />
     <Compile Include="Day2.cs" />
     <Compile Include="Day20.cs" />
+    <Compile Include="Day21.cs" />
+    <Compile Include="Day22.cs" />
     <Compile Include="Day3.cs" />
     <Compile Include="Day4.cs" />
     <Compile Include="Day5.cs" />
@@ -67,12 +73,14 @@
     <Compile Include="Stuff\DanceCoordinator.cs" />
     <Compile Include="Stuff\FirewallLayer.cs" />
     <Compile Include="Stuff\Hexagon.cs" />
+    <Compile Include="Stuff\ImageProcessor.cs" />
     <Compile Include="Stuff\Particle.cs" />
     <Compile Include="Stuff\ParticleProperty.cs" />
     <Compile Include="Stuff\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inputs\Day11.txt" />
@@ -94,6 +102,10 @@
     <Content Include="Inputs\Day20_example2.txt" />
     <Content Include="Inputs\Day20_example.txt" />
     <Content Include="Inputs\Day20.txt" />
+    <Content Include="Inputs\Day21_example.txt" />
+    <Content Include="Inputs\Day21.txt" />
+    <Content Include="Inputs\Day22_example.txt" />
+    <Content Include="Inputs\Day22.txt" />
     <Content Include="Inputs\Day9.txt" />
     <Content Include="Inputs\Day8.txt" />
     <Content Include="Inputs\Day9_example.txt" />
