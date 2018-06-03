@@ -14,7 +14,7 @@ namespace AdventOfCode2017
         {
             string[] lines = System.IO.File.ReadAllLines(@"..\..\Inputs\\Day22.txt");
 
-            //Part1(lines);
+            Part1(lines);
             Part2(lines);
         }
 
